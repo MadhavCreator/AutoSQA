@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/AppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.468">
+
+        <ImageView
+            android:id="@+id/ImageName"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toBottomOf="@+id/AppName"
+            app:layout_constraintEnd_toEndOf="@+id/AppName"
+            app:layout_constraintTop_toTopOf="@+id/AppName"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/autosqa_logo" />
+
+        <TextView
+            android:id="@+id/TextName"
+
+            style="@style/Widget.AppCompat.TextView"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_gravity="end"
+            android:fontFamily="@font/alegreya_bold_italic"
+            android:text="utoSQA"
+            android:textColor="#CD000000"
+            android:textSize="65sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Farmer's Best Solution"
+        android:textColor="#A8000000"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/AppName"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/AppName"
+        app:layout_constraintTop_toTopOf="@+id/AppName" />
+
+    <TextView
+        android:id="@+id/SampleResultHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soil Sample Result :"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.197" />
+
+    <TextView
+        android:id="@+id/SolutionResultHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AutoSQA Solution :"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Nutrition"
+        app:layout_constraintVertical_bias="0.165" />
+
+    <TextView
+        android:id="@+id/Solution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="14sp"
+
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/SolutionResultHeading"
+        app:layout_constraintHorizontal_bias="0."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SolutionResultHeading"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <ImageView
+        android:id="@+id/AddDevice"
+        android:layout_width="100dp"
+        android:layout_height="92dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953"
+        app:srcCompat="@drawable/ic_baseline_add_circle_24" />
+
+    <TextView
+        android:id="@+id/pHLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Instantaneous pH level - Nan"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="@+id/SampleResultHeading"
+        app:layout_constraintTop_toBottomOf="@+id/SampleResultHeading" />
+
+    <TextView
+        android:id="@+id/Temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Temperature - Nan"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/pHLevel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/pHLevel"
+        app:layout_constraintTop_toBottomOf="@+id/pHLevel" />
+
+    <TextView
+        android:id="@+id/Moisture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Moisture - Nan"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/Temperature"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Temperature"
+        app:layout_constraintTop_toBottomOf="@+id/Temperature" />
+
+    <TextView
+        android:id="@+id/Nutrition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Nutritional level - Nan"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/Moisture"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Moisture"
+        app:layout_constraintTop_toBottomOf="@+id/Moisture" />
+
+    <TextView
+        android:id="@+id/LandArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Land Area - Nan"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/Nutrition"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Nutrition"
+        app:layout_constraintTop_toBottomOf="@+id/Nutrition" />
+
+    <Button
+        android:id="@+id/Run"
+        android:layout_width="72dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:text="Run"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/SolutionResultHeading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintStart_toEndOf="@+id/SolutionResultHeading"
+        app:layout_constraintTop_toTopOf="@+id/SolutionResultHeading"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <Button
+        android:id="@+id/MoistureTest"
+        android:layout_width="118dp"
+        android:layout_height="47dp"
+        android:text="Moisture"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/Run"
+        app:layout_constraintStart_toStartOf="@+id/Run"
+        app:layout_constraintTop_toBottomOf="@+id/Run" />
+    <Button
+        android:id="@+id/SoilMixture"
+        android:layout_width="118dp"
+        android:layout_height="47dp"
+        android:text="Mix Soil"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/MoistureTest"
+        app:layout_constraintStart_toStartOf="@+id/MoistureTest"
+        app:layout_constraintTop_toBottomOf="@+id/MoistureTest" />
+    <ImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        app:srcCompat="@drawable/farmer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/AddDevice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Solution" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
